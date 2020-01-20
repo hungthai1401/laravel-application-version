@@ -1,0 +1,47 @@
+{
+    "name": "hungthai1401/laravel-application-version",
+    "description": "Simple way to get app market version information from Google Play store or Apple App Store",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "application", "version", "app store", "apple store", "google play"],
+    "authors": [
+        {
+            "name": "Nguyen Hung Thai",
+            "email": "hungthai1401.it@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/hungthai1401/laravel-application-version",
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*",
+        "illuminate/support": "^5.5|^6",
+        "guzzlehttp/guzzle": "^6.5",
+        "symfony/dom-crawler": "^5.0",
+        "symfony/css-selector": "^4.3|^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "HT\\ApplicationVersion\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HT\\ApplicationVersion\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HT\\ApplicationVersion\\Providers\\ServiceProvider"
+            ],
+            "aliases": {
+                "ApplicationVersion": "HT\\ApplicationVersion\\Facades\\Facade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
